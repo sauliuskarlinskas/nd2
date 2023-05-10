@@ -81,3 +81,26 @@
     background-color: #fff200;
   }
 }
+
+.square {
+  width: 150px;
+  height: 150px;
+  border-radius: 2px solid #0df80d;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: azure;
+  background-color: #00ffff;
+}
+
+.circle {
+  width: 150px;
+  height: 150px;
+  border: 2px solid #0d67f8;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: azure;
+  background-color: #fff200;
+}
