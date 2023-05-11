@@ -66,12 +66,15 @@ function Buttons4(){
 
     const [squareList, setSquareList] = useState([]);
     const addsquare = _ => {
-        setSquareList([...squareList, <div className="squareRed"></div> ])
+        setSquareList(squareList => [...squareList, <div className="squareRed"></div> ])
     }
     return (
         <>
             <button className="red" onClick={addsquare}>add</button>
-            <div style={{display: "flex", flexWrap:"wrap"}}>{squareList}</div>
+            <div style={{display: "flex", flexWrap:"wrap"}}>{squareList}
+            
+            
+            </div>
         </>
     ) 
 }
@@ -81,10 +84,10 @@ function Buttons5(){
 
     const [squareList, setSquareList] = useState([]);
     const addsquareBlue = _ => {
-        setSquareList([...squareList, <div className="squareBlue"></div> ]);
+        setSquareList(squareList =>[...squareList, <div className="squareBlue"></div> ]);
     }
     const addsquareRed = _ => {
-        setSquareList([...squareList, <div className="squareRed"></div> ]);
+        setSquareList(squareList =>[...squareList, <div className="squareRed"></div> ]);
     }
     const reset = _ => {
         setSquareList([]);
