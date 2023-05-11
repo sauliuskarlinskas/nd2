@@ -1,6 +1,7 @@
 import rand from "./Functions/rand"
 
 
+
 //1.1
 function Zuikis() {
     return (
@@ -53,6 +54,14 @@ function Paukstis({ p1, p2, textColor }) {
 }
 
 //2
+const dogs = [
+    { id: 0, name: 'šunius' },
+    { id: 1, name: 'šuo' },
+    { id: 2, name: 'Bobikas' },
+    { id: 3, name: 'kudlius' },
+    { id: 4, name: 'Šarikas' },
+    { id: 5, name: 'avigalvis' },
+];
 
 //2.1
 function DogSquare() {
@@ -87,31 +96,34 @@ function DogCircle() {
 
 //2.3
 function DogOddEven() {
-
-    const dogs = ['šunius', 'Bobikas', 'kudlius', 'Šarikas', 'avigalvis', 'šuo'];
-    const dog = dogs.map((dog, index) => {
+    const dogsList = dogs.map((dog, index) => {
         if (index % 2 === 0) {
-            return (
-                <div className="sq-bin">
-                    {
-                        dogs.map((d, i) => <div key={i} className="sq">{d}</div>)
-                    }
-
-                </div>
-            )
+            return <li className="squareRed">{dog.name}</li>;
         }
         else {
-            return (
-                <div className="crc-bin">
-                    {
-                        dogs.map((d, i) => <div key={i} className="crc">{d}</div>)
-                    }
-
-
-                </div>
-            )
+            return <li className="circle">{dog.name}</li>
         }
-    }
-    )
+    })
+    return <ul>{dogsList}</ul>;
 }
-export { Text, Zuikis, ZebraiBebrai, Medis, Paukstis, DogSquare, DogCircle, DogOddEven }
+
+//2.4
+function DogBigLetter() {
+    const dogsList = dogs.filter(dog => dog.name[0] === dog.name[0].toLowerCase()).map(dog => <li key={dog.id}>{dog.name}</li>);
+
+    return <ul>{dogsList}</ul>;
+}
+
+//2,5
+function DogsColor() {
+    const dogsList = dogs.map(dog => {
+        if (dog.name.length > 6) {
+            return <li key={dog.id} style={{ color: 'green' }}>{dog.name.length}</li>;
+        }
+        else {
+            return <li key={dog.id} style={{ color: 'red' }}>{dog.name.length}</li>
+        }
+    })
+    return <ul>{dogsList}</ul>;
+}
+export { Text, Zuikis, ZebraiBebrai, Medis, Paukstis, DogSquare, DogCircle, DogOddEven, DogBigLetter, DogsColor }
