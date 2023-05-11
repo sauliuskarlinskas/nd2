@@ -82,25 +82,43 @@
   }
 }
 
-.square {
-  width: 150px;
-  height: 150px;
-  border-radius: 2px solid #0df80d;
+.squareRed {
+  margin: 10px;
+  width: 100px;
+  height: 100px;
+  border-radius: 2px solid #1d0df8;
   display: flex;
   justify-content: center;
   align-items: center;
   color: azure;
-  background-color: #00ffff;
+  background-color: #ff0019;
+}
+.squareBlue {
+  margin: 10px;
+  width: 100px;
+  height: 100px;
+  border-radius: 2px solid #f8440d;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: azure;
+  background-color: #0033ff;
 }
 
 .circle {
-  width: 150px;
-  height: 150px;
+  margin: 10px;
+  width: 100px;
+  height: 100px;
   border: 2px solid #0d67f8;
   border-radius: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
   color: azure;
-  background-color: #fff200;
+  background-color: #48ff00;
+}
+
+.count {
+  font-size: 20px;
+  color: #ff00ff;
 }
