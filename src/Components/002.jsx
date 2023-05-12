@@ -84,7 +84,7 @@ function Buttons5(){
 
     const [squareList, setSquareList] = useState([]);
     const addsquareBlue = _ => {
-        setSquareList(squareList =>[...squareList, <div className="squareBlue"></div> ]);
+        setSquareList(squareList => [...squareList, <div className="squareBlue"></div> ]);
     }
     const addsquareRed = _ => {
         setSquareList(squareList =>[...squareList, <div className="squareRed"></div> ]);
@@ -102,4 +102,28 @@ function Buttons5(){
     ) 
 }
 
-export { Buttons, Buttons2, Buttons3, Buttons4, Buttons5 }
+//5. Alternatyva
+function Sq4() {
+
+    const [sq, setSq] = useState([]);
+
+    const add = c => setSq(s => [...s, c]);
+        
+
+    return (
+        <>
+            <div className="sq-bin">
+                {
+                    sq.map((sq, i) => <div className="sq" style={{
+                        backgroundColor: sq === 'B' ? '#87ceeb70' : '#dc143c70',
+                        borderColor: sq === 'B' ? '#87ceeb' : '#dc143c'
+                    }} key={i}></div>)
+                }
+            </div>
+            <button className="red" onClick={_ => add('R')}>add</button>
+            <button className="blue" onClick={_ => add('B')}>add</button>
+        </>
+    )
+
+}
+export { Buttons, Buttons2, Buttons3, Buttons4, Buttons5, Sq4 }

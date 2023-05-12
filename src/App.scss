@@ -54,7 +54,8 @@
   .sq {
     width: 150px;
     height: 150px;
-    border-radius: 2px solid #0df80d;
+    border: 2px solid #0df80d;
+    border-radius: 5px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -86,7 +87,8 @@
   margin: 10px;
   width: 100px;
   height: 100px;
-  border-radius: 2px solid #1d0df8;
+  border: 2px solid #1d0df8;
+  border-radius: 5px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -97,13 +99,29 @@
   margin: 10px;
   width: 100px;
   height: 100px;
-  border-radius: 2px solid #f8440d;
+  border-radius: 5px;
+  border: 2px solid #f8440d;
   display: flex;
   justify-content: center;
   align-items: center;
   color: azure;
   background-color: #0033ff;
 }
+.squareBlack {
+  margin: 10px;
+  width: 100px;
+  height: 100px;
+  border-radius: 5px;
+  border: 2px solid #f8440d;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: azure;
+  background-color: #000000;
+  .content {
+  }
+}
+
 
 .circle {
   margin: 10px;
@@ -121,4 +139,23 @@
 .count {
   font-size: 20px;
   color: #ff00ff;
+}
+
+.greenSq {
+  margin: 10px;
+  width: 200px;
+  height: 500px;
+  border-radius: 2px solid #f8440d;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  color: azure;
+  background-color: #0ae92b;
+}
+
+.container {
+  width: 80%;
+  display: flex;
+  justify-content: space-around;
 }
